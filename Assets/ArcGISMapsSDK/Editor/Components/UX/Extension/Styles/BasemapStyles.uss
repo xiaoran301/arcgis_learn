@@ -1,0 +1,74 @@
+.baseMap .base-selector-wrapper{
+	align-self:flex-start;
+	max-width:none;
+	flex-grow:1;
+}
+.base-selector-wrapper PopupField{
+	flex-grow:1;
+	flex-direction: row;
+	height:21px;	
+	align-self:stretch;
+	max-width:none;
+	margin-left:4px;
+}
+	.base-selector-wrapper PopupField > Label{
+		align-self:stretch;
+		margin-right:3px;
+	}
+	.base-selector-wrapper PopupField > VisualElement{
+		border-color:rgb(0,111,183);
+		color:rgb(255,255,255);
+		background-color:transparent;
+	}
+.baseMap .basemap-thumbnail-wrapper{
+	position:absolute;
+	right:0;
+	top:28px;
+	width:131px;
+	height:86px;	
+}
+	.baseMap .basemap-thumbnail-wrapper Button{
+		position:absolute;
+		right:0;
+		width:100%;
+		height:100%;
+		background-image: resource("BaseMaps/Imagery");
+		border-width:1px;
+		border-radius:0;
+		border-color:rgb(0,111,183);
+	}
+.baseMap .custom-toggle-wrapper{
+	flex-direction: row;
+	margin-bottom:75px;
+	margin-top:16px;
+}
+	.baseMap .custom-toggle-wrapper Label{
+		width:138px;
+		min-width:138px;
+		font-size:12px;
+		-unity-font-style: normal;
+		padding-left:1px;
+		margin-left:8px;
+		align-self:center;
+	}
+.baseMap .basemap-thumbnail-wrapper Button.Imagery{
+	background-image: resource("BaseMaps/IMAGERY");
+}
+.baseMap .basemap-thumbnail-wrapper Button.Streets{
+	background-image: resource("BaseMaps/STREETS");
+}
+.baseMap .basemap-thumbnail-wrapper Button.Topographic{
+	background-image: resource("BaseMaps/TOPOGRAPHIC");
+}
+.baseMap .basemap-thumbnail-wrapper Button.NatGeo{
+	background-image: resource("BaseMaps/NATGEO");
+}
+.baseMap .basemap-thumbnail-wrapper Button.Oceans{
+	background-image: resource("BaseMaps/OCEANS");
+}
+.baseMap .basemap-thumbnail-wrapper Button.Light_Gray_Canvas{
+	background-image: resource("BaseMaps/LIGHT_GRAY_CANVAS");
+}
+.baseMap .basemap-thumbnail-wrapper Button.Dark_Gray_Canvas{
+	background-image: resource("BaseMaps/DARK_GRAY_CANVAS");
+}

@@ -1,0 +1,75 @@
+.esri-logo{
+	background-image: resource("ESRI_LOGO");
+    width: 370px;
+    height: 114px;
+    align-self: center;
+}
+.default-foldout{
+	border-color:rgb(85,85,85);
+	border-top-width:1px;
+}
+	.default-foldout > Toggle{
+		padding-left:15px;
+		padding-top:3px;
+	}
+	.default-foldout Toggle VisualElement VisualElement{
+		margin-top:2px;
+	}
+TextInput{
+	border-color:rgb(0,111,183);
+}
+#unity-dragger{
+	border-width:1px;
+	border-color:rgb(0,111,183);
+	background-color:rgb(140,140,140);
+}
+.custom-toggle{
+	width:15px;
+	height:15px;
+	border-width:0;
+	border-radius:0;
+}
+
+/*** CHECK AFTER HERE ***/
+
+.category-box{
+	margin:2px;
+	padding: 6px;
+	border-color: rgb(0,0,0);
+}
+.section-title{
+    font-size: 14px;
+    -unity-font-style: bold;
+    color: rgb(0, 0, 0);
+	padding: 0;
+}
+.one-indentation{
+	padding-left:4px;
+}
+.custom-toggle{
+	background-image: resource('Icons/checkbox_grey_20x20');
+	width:21px;
+	height:21px;
+	padding:0;
+}
+.custom-toggle-enabled{
+	background-image: resource('Icons/checkbox_blue_20x20');
+}
+#unity-text-input{
+	background-color:transparent;
+	border-radius:0;
+}
+.unity-base-popup-field__input{
+	border-radius:0;
+}
+.unity-base-slider__input{
+	margin-left:4px;
+	align-self:center;
+}
+TextInput{
+	height:22px;
+}
+.spacer {
+	margin-top:10px;
+}
+

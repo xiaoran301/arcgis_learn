@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcf7219bab7fe46a1ad266029b2fee19, type: 3}
+  m_Name: Readme_PrefabScene
+  m_EditorClassIdentifier: 
+  icon: {fileID: 2800000, guid: 46bbb5cc233cf2544b350068fc6f01d7, type: 3}
+  title: Scene configuration using Prefabs
+  sections:
+  - heading: 
+    text: The PrefabScene sample scene uses the ArcGISMapController UI prefab to create a scene. To change
+      the camera settings, base map or add and delete layers click on the PrefabScene_NY
+      in the Project folder.
+    linkText: 
+    url: 
+  - heading: 
+    text: "The prefab in the scene is only a reference to the prefab in the
+      Project folder. If you want to change the scene settings, it\u2019s necessary
+      to change the parameters of the prefab in the content folder and click on the
+      \u201CUpdate Prefab\u201D button at the end of the UI."
+    linkText: 
+    url: 
+  - heading: 
+    text: The prefab in the scene hierarchy will then automatically update.
+    linkText: 
+    url: 
+  - heading: 
+    text: Note that you can attach the ArcGISMapController script to a gameobject and save it in the scene without converting it into a prefab.
+    linkText: 
+    url:
+  - heading: 
+    text: 'These are the layers used in the Sample scene:'
+    linkText: 
+    url: 
+  - heading: 
+    text: 
+    linkText: New York Transit Frequency
+    url: https://runtime.maps.arcgis.com/home/item.html?id=b3a3743cda50473ba5df14eaf14e5d18
+  - heading: 
+    text: 
+    linkText: New York Industrial Areas
+    url: https://runtime.maps.arcgis.com/home/item.html?id=1c28f1944276445a99f5b554c3c07771
+  - heading: 
+    text: 
+    linkText: New York 3D Buildings
+    url: https://runtime.maps.arcgis.com/home/item.html?id=a457834a6cb449cd958502d6e98ba305
+  loadedLayout: 1

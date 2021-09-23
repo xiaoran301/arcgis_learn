@@ -1,0 +1,122 @@
+.table-wrapper{
+	margin-top:15px;
+	margin-bottom:15px;
+}
+.table-wrapper .table-content .table-header{
+	flex-direction:row;
+	margin-bottom:5px;
+}
+.table-wrapper .table-content .table-body{
+	flex-direction:column;
+}
+	.table-wrapper .table-content .table-header Label{
+		padding-top:3px;
+		padding-bottom:3px;
+		background-color:rgb(230,230,230);
+		color:rgb(100, 100,100);
+		max-height:21px;
+	}
+	.table-wrapper .table-content .table-header .visibility{
+		width:21px; 
+		height:21px;
+		background-image: resource("LayerIcons/ICON_VISIBILITY");
+	}
+	.table-wrapper .table-content .table-header .moveup{
+		width:21px; 
+		height:21px;
+		margin-left:3px;
+		background-image: resource("LayerIcons/ICON_MOVE_UP");
+	}
+	.table-wrapper .table-content .table-header .movedown{
+		width:21px; 
+		height:21px;
+		margin-left:3px;
+		background-image: resource("LayerIcons/ICON_MOVE_DOWN");
+	}
+	.table-wrapper .table-content .table-header .layer-name{
+		flex:1;
+		margin-left:3px;
+		height:21px;
+	}
+	.table-wrapper .table-content .table-header .opacity{
+		flex:0.303;
+		margin-left:3px;
+		height:21px;
+	}
+	.table-wrapper .table-content .table-header .layer-name > Label{
+		padding-left:10px;
+		color:rgb(100, 100,100);
+		padding-bottom:3.5px;
+	}
+	.table-wrapper .table-content .table-header .opacity > Label{
+		padding-left:10px;
+		color:rgb(100, 100,100);
+		padding-bottom:3.5px;
+	}
+	.table-wrapper .table-content .table-header .delete, 
+	.table-wrapper .table-content .table-header .copy{
+		height:21px;
+		width:21px;
+		margin-left:3px;
+	}
+	.table-wrapper .table-content .table-header .copy{
+		background-image: resource("LayerIcons/ICON_CLIPBOARD");
+	}
+	.table-wrapper .table-content .table-header .delete{
+		background-image: resource("LayerIcons/ICON_DELETE");
+	}
+	.table-wrapper .table-content .table-body .table-row{
+		height:21px;
+		margin-bottom:3px;
+		flex-direction:row;
+	}
+		.table-wrapper .table-content .table-body .table-row .table-cell-visibility,
+		.table-wrapper .table-content .table-body .table-row .table-cell-layer-delete{
+			width:21px;
+			height:29px;
+		}
+			.table-wrapper .table-content .table-body .table-row .table-cell .custom-toggle{
+				margin:0;
+				width:21px;
+				height:21px;
+				padding:0;
+			}
+		.table-wrapper .table-content .table-body .table-row .table-cell-moveup,
+		.table-wrapper .table-content .table-body .table-row .table-cell-movedown,{
+			margin-left:3px;
+			height:29px;
+		}
+		.table-wrapper .table-content .table-body .table-row .table-cell-layer-name{
+			flex:1;
+			display:flex;
+			margin-left:3px;
+			margin-right:3px;
+			margin-bottom:1px;
+		}
+			.table-wrapper .table-content .table-body .table-row .table-cell-layer-name .layer-name{
+				padding-top:0px;
+				margin:0;
+			}
+			.table-wrapper .table-content .table-body .table-row .table-cell-layer-name TextField TextInput{
+				padding-left:10px;
+				border-width:1px;
+				border-color:rgb(0,111,183);
+				height:21px;
+			}
+		.table-wrapper .table-content .table-body .table-row .table-cell-opacity{
+			flex:0.3;
+			flex-basis:0.2%
+		}
+			.table-wrapper .table-content .table-body .table-row .table-cell-opacity TextField{
+				margin:0;
+			}
+			.table-wrapper .table-content .table-body .table-row .table-cell-opacity TextField TextInput{
+				border-radius:0;
+				height:22px;
+				padding-left:10px;
+				height:21px;
+			}
+		.table-wrapper .table-content .table-body .table-row .table-cell-layer-delete,
+		.table-wrapper .table-content .table-body .table-row .table-cell-layer-copy{
+			margin-left:3px;
+		}

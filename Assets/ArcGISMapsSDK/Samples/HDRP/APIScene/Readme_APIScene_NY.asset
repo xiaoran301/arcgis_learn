@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcf7219bab7fe46a1ad266029b2fee19, type: 3}
+  m_Name: Readme_APIScene_NY
+  m_EditorClassIdentifier: 
+  icon: {fileID: 2800000, guid: 42cca992134a4c14bbce68ac07adbc0b, type: 3}
+  title: Scene configuration using C# API
+  sections:
+  - heading: 
+    text: 'This Sample scene uses the C# Public API to configure the scene. To change
+      the camera settings, base map or add and delete layers open the APIScene_NY
+      C# script in Visual Studio. '
+    linkText: 
+    url: 
+  - heading: 
+    text: "All the steps to achieve the demo are commented in the C# and it\u2019s
+      possible to see all the capabilities of the API."
+    linkText: 
+    url: 
+  - heading: 
+    text: To test the scene, click on the Play button in the top bar to run the Demo.
+      You should be able to control your movement with the WASD or arrow keys, and
+      by using the mouse to look around.
+    linkText: 
+    url: 
+  - heading: 
+    text: 'These are the services used in the Sample scene:'
+    linkText: 
+    url: 
+  - heading: 
+    text: 
+    linkText: New York Transit Frequency
+    url: https://runtime.maps.arcgis.com/home/item.html?id=b3a3743cda50473ba5df14eaf14e5d18
+  - heading: 
+    text: 
+    linkText: New York Industrial Areas
+    url: https://runtime.maps.arcgis.com/home/item.html?id=1c28f1944276445a99f5b554c3c07771
+  - heading: 
+    text: 
+    linkText: New York 3D Buildings
+    url: https://runtime.maps.arcgis.com/home/item.html?id=a457834a6cb449cd958502d6e98ba305
+  loadedLayout: 1

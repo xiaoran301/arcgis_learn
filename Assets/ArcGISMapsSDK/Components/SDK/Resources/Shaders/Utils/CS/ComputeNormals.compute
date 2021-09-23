@@ -1,0 +1,95 @@
+﻿#pragma kernel CSMain
+
+Texture2D<float> Input;
+RWTexture2D<float4> Output;
+
+float MinLatitude;
+float LatitudeAngleDelta;
+float LongitudeArc;
+float LatitudeLength;
+float CircleLongitude;
+float EarthRadius;
+
+float GetLongitudeLength(float step)
+{
+	return CircleLongitude * sin(90.0 - abs(MinLatitude + step * LatitudeAngleDelta))* LongitudeArc;
+}
+
+[numthreads(8,8,1)]
+void CSMain (uint3 id : SV_DispatchThreadID)
+{
+	uint width, height;
+	Output.GetDimensions(width, height);
+
+	if (id.x < width && id.y < height)
+	{
+		uint inputWidth, inputHeight;
+		Input.GetDimensions(inputWidth, inputHeight);
+		int2 sizeMinusOne = uint2(inputWidth - 1, inputHeight - 1);
+
+		int2 sampleCoord0 = (int2)id.xy;
+		int2 sampleCoord1 = max(sampleCoord0 + int2(0, -1), 0);
+		int2 sampleCoord2 = min(sampleCoord0 + int2(0, 1), sizeMinusOne);
+		int2 sampleCoord3 = max(sampleCoord0 + int2(-1, 0), 0);
+		int2 sampleCoord4 = min(sampleCoord0 + int2(1, 0), sizeMinusOne);
+
+		float sample0 = Input[sampleCoord0];
+		float sample1 = Input[sampleCoord1];
+		float sample2 = Input[sampleCoord2];
+		float sample3 = Input[sampleCoord3];
+		float sample4 = Input[sampleCoord4];
+
+		float latitudePixelSize = LatitudeLength / inputHeight;
+		float longitudePixelSize = GetLongitudeLength((float)id.x) / inputWidth;
+
+		float3 v0 = float3(0.0f, latitudePixelSize * (abs(sampleCoord2.y - sampleCoord0.y)), (sample2 - sample0));
+		float3 v1 = float3(0.0f, -latitudePixelSize * (abs(sampleCoord1.y - sampleCoord0.y)), (sample1 - sample0));
+		float3 v2 = float3(longitudePixelSize * (abs(sampleCoord4.x - sampleCoord0.x)), 0.0f, (sample4 - sample0));
+		float3 v3 = float3(-longitudePixelSize * (abs(sampleCoord3.x - sampleCoord0.x)), 0.0f, (sample3 - sample0));
+
+		float3 normal = 0;
+
+		[UNITY_FLATTEN]
+		if (id.x != 0 && id.y != 0 && id.x != sizeMinusOne.x && id.y != sizeMinusOne.y)
+		{
+			normal = normalize(cross(v0, v3) + cross(v1, v2));
+		}
+		else
+		{
+			if (id.x == 0 && id.y == 0)
+			{
+				normal = normalize(cross(v2, v0));
+			}
+			else if (id.x == 0 && id.y == sizeMinusOne.y)
+			{
+				normal = normalize(cross(v1, v2));
+			}
+			else if (id.x == sizeMinusOne.x && id.y == 0)
+			{
+				normal = normalize(cross(v0, v3));
+			}
+			else if (id.x == sizeMinusOne.x && id.y == sizeMinusOne.y)
+			{
+				normal = normalize(cross(v3, v1));
+			}
+			else if (id.x == 0)
+			{
+				normal = normalize(cross(v2, v0));
+			}
+			else if (id.y == 0)
+			{
+				normal = normalize(cross(v0, v3));
+			}
+			else if (id.x == sizeMinusOne.x)
+			{
+				normal = normalize(cross(v3, v1));
+			}
+			else if (id.y == sizeMinusOne.y)
+			{
+				normal = normalize(cross(v1, v2));
+			}
+		}
+		
+		Output[id.xy] = float4(-normal.x, -normal.y, normal.z, 1);
+	}	
+}

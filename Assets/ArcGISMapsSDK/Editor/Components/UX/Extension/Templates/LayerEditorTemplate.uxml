@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<UXML
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="UnityEngine.UIElements"
+xmlns:e="UnityEditor.UIElements"
+    xsi:noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd"
+    xsi:schemaLocation="UnityEngine.UIElements ../UIElementsSchema/UnityEngine.UIElements.xsd">
+
+  <!-- LAYER BOX -->
+    <Foldout class="default-foldout layer-list-box" text="LAYERS">
+      <VisualElement class="table-wrapper">
+        <ScrollView class="table-content" name="layer-table-content" show-vertical-scroller="false" mode="ScrollViewMode.Vertical" Vertical-page-size="1">
+          
+          <VisualElement class="table-header">
+            
+            <Label class="visibility" text=""/>
+            <Label class="moveup" text=""/>
+            <Label class="movedown" text=""/>
+            <VisualElement class="layer-name">
+              <Label class="layer-name-text" text="Layer Name"/>
+            </VisualElement>
+            <VisualElement class="opacity">
+              <Label class="opacity-text" text="Opacity"/>
+            </VisualElement>
+            <Label class="copy" text=" "/>
+            <Label class="delete" text=" "/>
+
+          </VisualElement>
+          
+          <VisualElement class="table-body" name="table-body">
+          </VisualElement>
+        
+        </ScrollView>
+      </VisualElement>
+    </Foldout>
+  
+</UXML>

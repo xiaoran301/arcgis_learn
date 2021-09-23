@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<UXML
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="UnityEngine.UIElements"
+xmlns:e="UnityEditor.UIElements"
+    xsi:noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd"
+    xsi:schemaLocation="UnityEngine.UIElements ../UIElementsSchema/UnityEngine.UIElements.xsd">
+
+  <VisualElement class="main-bounding-box">
+    <VisualElement class="esri-logo"/>
+
+    <!-- VIEW MODE-->
+    <Foldout class="default-foldout viewing-mode" text="VIEW MODE">
+
+      <VisualElement class="button-wrapper">
+        <Button text="Global Scene" name="viewing-mode-global-button"  class="viewing-mode-button viewing-mode-button-selected"></Button>
+        <Button text="Local Scene" name="viewing-mode-local-button" class="viewing-mode-button"></Button>
+      </VisualElement>
+    
+    </Foldout>
+    
+    <!--CAMERA BOX-->
+    <Foldout class="default-foldout camera-settings-box" text="CAMERA LOCATION">
+      
+      <VisualElement class="spacer" />
+      
+      <VisualElement class="category-box-row lat-long-box one-indentation">
+        <Label text="Latitude" />
+        <TextField name="lat-key-text"></TextField>
+      </VisualElement>
+      
+      <VisualElement class="category-box-row lat-long-box one-indentation">
+        <Label text="Longitude" />
+        <TextField name="lng-key-text"></TextField>
+      </VisualElement>
+ 
+      <VisualElement class="category-box-row slider-with-label">
+        <Slider name="slider-camera-altitude" label ="Altitude" low-value="0" high-value="100000" class="one-indentation"/>
+        <TextField class="" name="slider-camera-altitude-text"/>
+      </VisualElement>
+      
+      <VisualElement class="category-box-row slider-with-label">
+        <Slider name="slider-camera-heading" label ="Heading" low-value="0" high-value="360" class="one-indentation"/>
+        <TextField class="" name="slider-camera-heading-text"/>
+      </VisualElement>
+
+      <VisualElement class="category-box-row slider-with-label">
+        <Slider name="slider-camera-pitch" label ="Pitch" low-value="0" high-value="180" class="one-indentation"/>
+        <TextField class="" name="slider-camera-pitch-text"/>
+      </VisualElement>
+
+      <VisualElement class="category-box-row slider-with-label">
+        <Slider name="slider-camera-roll" label ="Roll" low-value="0" high-value="360" class="one-indentation"/>
+        <TextField class="" name="slider-camera-roll-text"/>
+      </VisualElement>
+    
+      <VisualElement class="spacer" />
+
+    </Foldout>
+    
+    <!-- EXTENT -->
+    <Foldout class="default-foldout camera-settings-box map-extent-foldout" text="MAP EXTENT">
+      
+        <VisualElement class="category-box-row lat-long-box one-indentation lat-long-margin">
+          <Label text="Latitude" />
+          <TextField name="lat-extent-key-text"></TextField>
+        </VisualElement>
+
+        <VisualElement class="category-box-row lat-long-box one-indentation">
+          <Label text="Longitude" />
+          <TextField name="lng-extent-key-text"></TextField>
+        </VisualElement>
+
+        <VisualElement class="category-box-row slider-with-label">
+          <Slider name="slider-extent-altitude" label ="Altitude" low-value="0" high-value="10000000" class="one-indentation"/>
+          <TextField class="" name="slider-extent-altitude-text"/>
+        </VisualElement>
+        
+        <VisualElement class="category-box-row slider-with-label shape-selector-wrapper" name="shape-selector-wrapper">
+        </VisualElement>
+
+        <VisualElement class="category-box-row slider-with-label shape-options-wrapper" name="shape-options-wrapper">
+          <Label text="Shape Dimensions"/>
+          <TextField name="shape-dimension-x-text" text="X"></TextField>
+          <TextField name="shape-dimension-y-text" text="Y"></TextField>
+        </VisualElement>
+        
+        <Button text="Reset Extent" name="reset-extent-button"></Button>
+    
+    </Foldout>
+
+    <!-- BASE MAP BOX -->
+    <Foldout class="default-foldout baseMap-foldout baseMap" text="BASE MAP">
+      
+      <VisualElement class="spacer" />
+
+      <VisualElement class="category-box-row slider-with-label base-selector-wrapper" name="basemap-selector-wrapper">
+      </VisualElement>
+
+      <VisualElement class="category-box-row custom-toggle-wrapper terrain-elevation-toggle-wrapper">
+        <Button name="basemap-terrain-elevation-enabled"  class="custom-toggle"></Button>
+        <Label text="Terrain Elevation"></Label>
+      </VisualElement>
+      
+      <VisualElement class="category-box-row custom-toggle-wrapper basemap-thumbnail-wrapper">
+        <Button name="basemap-thumbnail"></Button>
+      </VisualElement>
+      
+    </Foldout>
+    
+    <!-- ADD DATA-->
+    <Foldout class="default-foldout add-data-foldout" text="ADD DATA">
+
+      <VisualElement class="top-menu-wrapper content" name="add-data-foldout-menu-wrapper">
+        <Button text="Add From URL" name="button-from-url" class="add-data-from-button add-data-from-button-selected"></Button>
+        <Button text="Add From File" name="button-from-file"  class="add-data-from-button"></Button>
+      </VisualElement>
+      
+      <VisualElement>
+        <Box name="from-url-box">
+          <TextField label="URL" name="layer-url-from" class="one-indentation"/>
+          <TextField name="layer-name-from-url" label="Layer Name" class="one-indentation"/>
+        </Box>
+        
+        <Box name="from-file-box">
+          <VisualElement class="input-wrapper">
+            <TextField name="layer-file-path"  label="File Path" readonly="true" class="one-indentation"></TextField>
+            <Button name="button-open-data-dialog" text="Select File"/>  
+          </VisualElement>
+          <TextField name="layer-name-from-file" label="Layer Name" class="one-indentation"></TextField>
+        </Box>
+        
+        <VisualElement class="button-wrapper">
+          <VisualElement class="inner-spacer"/>   
+          <Button text="Clear" name="button-clear-add-data-forms"></Button>
+          <Button text="Add Layer" name="from-file-box-save"></Button>
+        </VisualElement>
+      </VisualElement>
+    </Foldout>
+     
+  </VisualElement>
+</UXML>

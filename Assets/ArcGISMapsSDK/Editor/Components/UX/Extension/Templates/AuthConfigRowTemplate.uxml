@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<UXML
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="UnityEngine.UIElements"
+xmlns:e="UnityEditor.UIElements"
+
+xsi:noNamespaceSchemaLocation="../../../../../../UIElementsSchema/UIElements.xsd"
+xsi:schemaLocation="
+                        UnityEngine.UIElements ../../../../../../UIElementsSchema/UnityEngine.UIElements.xsd
+                        UnityEditor.UIElements ../../../../../../UIElementsSchema/UnityEditor.UIElements.xsd
+                        UnityEditor.PackageManager.UI ../../../../../../UIElementsSchema/UnityEditor.PackageManager.UI.xsd">
+
+	<VisualElement class="auth-config-table-row">
+		<VisualElement class="auth-config-name-wrapper">
+
+			<Button name="auth-config-active-toggle"  class="custom-toggle"></Button>
+
+			<VisualElement class="auth-config-layer-name">
+				<TextField class="auth-config-layer-text auth-row-text-normal" name="auth-config-name-field"/>
+			</VisualElement>
+
+			<VisualElement class="category-box-row slider-with-label shape-selector-wrapper" name="auth-login-type-switch">
+			</VisualElement>
+
+		</VisualElement>
+
+		<TextField name="auth-client-id-field"  label="Client ID" class="one-indentation auth-textfield"></TextField>
+		<TextField name="auth-redirect-uri-field" label="Redirect URI" class="one-indentation auth-textfield"></TextField>
+
+	</VisualElement>
+
+</UXML>

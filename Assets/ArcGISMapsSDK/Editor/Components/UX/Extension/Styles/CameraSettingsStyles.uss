@@ -1,0 +1,121 @@
+.camera-settings-box .category-box-row Label, 
+	.camera-settings-box Button, 
+		.layer-list-box .category-box-row Label,
+			.layer-list-box Button{
+	font-size:11px;
+	-unity-font-style: normal;
+	align-self:center;
+}
+.lat-long-box, 
+	.from-location{
+	flex-direction: row;
+	margin-bottom:2px;
+}
+
+	.lat-long-box Label,
+		.longitude-box Label,
+			.from-location Label{
+		min-width:116px;
+	}
+	.lat-long-box TextField{
+		flex-grow:1;
+	}
+	.lat-long-box Button{
+		margin-top:-1px;
+		height:20px;
+	}
+.lat-long-margin{
+	margin-top:8px;
+	
+}
+
+.slider-with-label{
+	flex-direction: row;
+	margin-bottom:2px;
+}
+	.slider-with-label Slider{
+		flex:1;
+		margin-top:0;
+		padding-left:0;
+		margin-right:0;
+	}
+	.slider-with-label TextField{
+		flex:0.35;
+		margin-left:4px;
+		width:auto;
+	}
+	.slider-with-label Label{
+		min-width:116px;
+		font-size:11px;
+		-unity-font-style: normal;
+		align-self:center;
+	}
+	
+.enable-extent-config{
+	padding-left:0 !important;
+	margin-left:0;
+	margin-top:10px;
+	flex-direction: row;
+}
+.extent-config{
+	margin-left:25px;
+	padding-bottom:10px;
+}
+	.extent-config .lat-long-box{
+		align-self:flex-end;
+		margin-bottom:2px;
+	}
+	.extent-config .slider-with-label{
+		align-self:flex-end;
+	}
+		.extent-config .shape-selector-wrapper PopupField > VisualElement > PopupTextElement{ 
+			width:304px;
+		}
+.extent-config .lat-long-box TextField{
+	max-width:325px;
+	margin-right:0;
+}
+.shape-selector-wrapper PopupField{
+	flex-grow:1;
+	flex-direction: row;
+	height:23px;
+}
+	.shape-selector-wrapper PopupField > Label{
+		min-width:120px;
+	}
+	.shape-selector-wrapper PopupField > VisualElement{
+		border-color:rgb(0,111,183);
+		color:rgb(255,255,255);
+		background-color:transparent;
+		padding-left:2px;
+	}
+		.shape-selector-wrapper PopupField > VisualElement > VisualElement{
+			color:rgb(0,111,183);
+		}
+.shape-options-wrapper > Label{
+	min-width:120px;
+	margin-left:3px;
+}
+.shape-options-wrapper > #shape-dimension-x-text{
+	flex:1;
+	margin-left:0px;
+	margin-right:0px;
+}
+.shape-options-wrapper > #shape-dimension-y-text{
+	flex:1;
+	margin-left:2px;
+}
+#reset-extent-button{
+	flex-direction:row;
+	border-width:0;
+	border-radius:0px;
+	border-color:rgb(114,113,118);
+	min-width:100px;
+	width:25%;
+	min-height:23px;
+	background-color:rgb(114,113,118);
+	color:rgb(255,255,255);
+	align-self:flex-end;
+	margin-top:20px;
+	margin-bottom:20px;
+}

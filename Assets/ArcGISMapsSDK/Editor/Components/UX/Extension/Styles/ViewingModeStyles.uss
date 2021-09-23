@@ -1,0 +1,37 @@
+﻿.viewing-mode .button-wrapper{
+	flex-direction: row;
+	height:40px;
+	-unity-font-style: normal;
+	font-size:12px;
+	margin-bottom:10px;
+	margin-top:10px;
+	width:100%;
+}
+	.viewing-mode .button-wrapper .viewing-mode-button{
+		flex-grow:1;
+		height:32px;
+		padding-top:8px;
+		padding-bottom:8px;
+		background-color:rgb(114,113,118);
+		background-image:none;
+		border-radius:0;
+		color:rgb(255,255,255);
+		border-left-width:0px;
+		border-right-width:0px;
+		border-top-width:0px;
+		border-bottom-width:0px;
+		cursor: link;
+		margin-left:0px;
+	}
+
+.viewing-mode VisualElement #viewing-mode-global-button{
+	margin-right:8px;
+}
+
+.viewing-mode VisualElement #viewing-mode-local-button{
+	margin-left:8px;
+}
+
+.viewing-mode .button-wrapper .viewing-mode-button-selected{
+	background-color:rgb(0,111,183);
+}

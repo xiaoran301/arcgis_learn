@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<UXML
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="UnityEngine.UIElements"
+xmlns:e="UnityEditor.UIElements"
+    xsi:noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd"
+    xsi:schemaLocation="UnityEngine.UIElements ../UIElementsSchema/UnityEngine.UIElements.xsd">
+
+  <VisualElement name="prefab-tools-wrapper" class="prefab-tools-wrapper">
+     <!-- PREFAB TOOLS -->
+    <Foldout class="default-foldout" text="PREFAB TOOLS">
+      <VisualElement class="prefab-button-wrapper">
+        <Button text="Apply Changes" name="update-prefab-button"  class="update-prefab-button"></Button>
+      </VisualElement>
+    </Foldout>
+     
+    
+  </VisualElement>
+</UXML>

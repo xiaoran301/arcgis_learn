@@ -1,0 +1,16 @@
+{
+    "name": "ArcGISMapsSDKSamples",
+    "references": [
+        "GUID:a8683e3dbe9d5c24580f512e02b22195",
+        "GUID:df380645f10b7bc4b97d4f5eb6303d95"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

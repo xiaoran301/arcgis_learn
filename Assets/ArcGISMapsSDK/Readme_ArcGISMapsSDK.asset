@@ -1,0 +1,107 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcf7219bab7fe46a1ad266029b2fee19, type: 3}
+  m_Name: Readme_ArcGISMapsSDK
+  m_EditorClassIdentifier: 
+  icon: {fileID: 2800000, guid: e66ab2d8249c63c4eafbcc08a127b2ae, type: 3}
+  title: ArcGIS Maps SDK for Unity
+  sections:
+  - heading: 
+    text: <b>ArcGIS Maps SDK for Unity</b> is a plugin developed by Esri that enables
+      access to real world maps and 3D content from the ArcGIS Platform. This plugin
+      provides samples and an API to create interactive, photorealistic 3D and XR
+      experiences with geospatial data
+    linkText: 
+    url: 
+  - heading: 
+    text: "It\u2019s possible to start from a blank scene but we recommend using
+      the sample scenes as a starting point"
+    linkText: 
+    url: 
+  - heading: 'Choosing a Rendering Pipeline:'
+    text: 'The ArcGISMapsSDK plugin requires either the Universal Render Pipeline package or the High Definition Render Pipeline package to make the plugin work. You can download either package via the Package Manager, and the plugin allows you to install both packages together in a project'
+  - heading: 'The plugin accepts: '
+    text: 
+    linkText: 
+    url: 
+  - heading: 
+    text: <b>- Web Services:</b> Raster Tile Layers, Integrated Mesh Scenes (v1.7),
+      3D Object Scene Layers (v1.7)
+    linkText: 
+    url: 
+  - heading: 
+    text: <b>- Local Services:</b> Integrated Mesh and 3D Object SLPK files and TPK
+      files
+    linkText: 
+    url: 
+  - heading: 'Sample Scenes:'
+    text: 'The ArcGISMapsSDK plugin contains two sample levels that make it easy
+      to understand how to use the plugin in your project. You are free to use the
+      levels as starting point for your own levels. Each sample scene is a different
+      path for developing content using the plugin and can be categorized by ease
+      of use. You can find the sample scenes in the content folder: ArcGISMapsSDK/Samples'
+    linkText: 
+    url: 
+  - heading: 
+    text: <b>- Prefab:</b> The Prefab Scene provides an intuitive User Interface
+      for adding GIS content to a scene. It is by far the easiest route to getting
+      GIS content into a scene and is recommended for non-technical users and users
+      interested in getting up and running quickly for rapid prototyping
+    linkText: 
+    url: 
+  - heading: 
+    text: <b>- C# Public API:</b> The C# Public API Scene demonstrates the most advanced
+      usage of the plugin and contains a C# script that calls into the Public API.
+      The code to make the scene functional is well commented and easy to understand;
+      simply open the C# script with Visual Studio
+    linkText: 
+    url: 
+  - heading: 'New Scene:'
+    text: 'There are two ways to use the plugin in a new scene:'
+    linkText: 
+    url: 
+  - heading: 
+    text: '<b>- Using the C# API:</b> You can view the online documentation or use the C# script from the sample scene as a guide:'
+    linkText: 
+    url: 
+  - heading: 
+    text: <b>ArcGISMapsSDK/Samples/APIScene/APIScene_NY</b>
+    linkText: 
+    url: 
+  - heading: 
+    text: "Create an empty object (\u201CCreate Empty\u201D in the Hierarchy tab)
+      and attach the C# script to it. To configure the C# script, use Visual Studio
+      to edit the parameters"
+    linkText: 
+    url: 
+  - heading: 
+    text: "<b>- Using a Prefab: </b> In the PrefabScene folder we provide a prefab
+      with an intuitive UI. It\u2019s allows users to configure the camera settings,
+      change the base map, and add data from a URL or from a file. After setting
+      up the prefab, you can drag it into the scene"
+    linkText: 
+    url: 
+  - heading: 
+    text: '<b>ArcGISMapsSDK/Samples/PrefabScene</b> '
+    linkText: 
+    url: 
+  - heading: 
+    text: "If the Inspector UI is part of a prefab, click on the Apply Changes button located at the bottom of the UI to update the prefab stored in the project"
+    linkText: 
+    url: 
+  - heading: 
+    text: Click on the <b>Play</b> button in the top bar to run the Demo. You should
+      be able to control your movement with the <b>WASD</b> keys, and by using the
+      mouse to look around
+    linkText: 
+    url: 
+  loadedLayout: 1

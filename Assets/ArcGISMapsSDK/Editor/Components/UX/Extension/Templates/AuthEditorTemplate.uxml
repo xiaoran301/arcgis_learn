@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<UXML
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="UnityEngine.UIElements"
+xmlns:e="UnityEditor.UIElements"
+xsi:noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd"
+xsi:schemaLocation="UnityEngine.UIElements ../UIElementsSchema/UnityEngine.UIElements.xsd">
+
+	<!-- AUTH BOX -->
+	<Foldout class="default-foldout authentication-foldout" text="AUTHENTICATION">
+
+		<VisualElement class="category-box-row lat-long-box one-indentation api-key">
+			<Label text="API Key" />
+			<TextField name="api-key-text-name"></TextField>
+		</VisualElement>
+
+		<Foldout class="default-foldout auth-foldout config-foldout" text="OAuth Configurations">
+
+			<Box class="auth-box">
+				<ScrollView class="table-content" name="layer-table-content" show-vertical-scroller="false" mode="ScrollViewMode.Vertical" Vertical-page-size="1">
+					<VisualElement class="config-table-body" name="config-table-body">
+					</VisualElement>
+				</ScrollView>
+
+				<VisualElement class="table-cell table-cell-visibility auth-buttons-row">
+					<Button name="add-config-button"  class="auth-button add-auth-item-button"></Button>
+					<Button name="remove-config-button"  class="auth-button remove-auth-item-button"></Button>
+				</VisualElement>
+			</Box>
+
+		</Foldout>
+
+		<Foldout class="default-foldout auth-foldout url-foldout" text="Configuration Mappings">
+
+			<Box class="auth-box">
+				<ScrollView class="table-content" name="layer-table-content" show-vertical-scroller="false" mode="ScrollViewMode.Vertical" Vertical-page-size="1">
+					<VisualElement class="resource-url-table-body" name="resource-url-table-body">
+					</VisualElement>
+				</ScrollView>
+
+				<VisualElement class="table-cell table-cell-visibility auth-buttons-row">
+					<Button name="add-resource-url-button"  class="auth-button add-auth-item-button"></Button>
+					<Button name="remove-resource-url-button"  class="auth-button remove-auth-item-button"></Button>
+				</VisualElement>
+			</Box>
+
+		</Foldout>
+
+	</Foldout>
+
+</UXML>
