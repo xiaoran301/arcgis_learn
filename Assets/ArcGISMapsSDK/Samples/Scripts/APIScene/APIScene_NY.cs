@@ -15,7 +15,7 @@ public class APIScene_NY : MonoBehaviour
 		// API Key
 		string apiKey = ""; // "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b";
 
-		var viewMode = Esri.GameEngine.Map.ArcGISMapType.Global;
+		var viewMode = Esri.GameEngine.Map.ArcGISMapType.Local;
 
 		// Create the Map Document
 		var arcGISMap = new Esri.GameEngine.Map.ArcGISMap(viewMode);
