@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-10-11T13:26:09.558Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36" etag="4RnH4X9cgLm2Ej1qfNPY" version="20.4.0" type="github">
+<mxfile host="app.diagrams.net" modified="2022-10-13T11:21:02.106Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36" etag="EDO8_TlNMpkZRtDr2SyE" version="20.4.0" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
     <mxGraphModel dx="1697" dy="2030" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -419,6 +419,48 @@
         </mxCell>
         <mxCell id="ITSwiidnPCKGS9sClgnD-110" value="触发CCSpriteFrame.OnAwake" style="whiteSpace=wrap;html=1;fontColor=#000000;rounded=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="80" y="3310" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ITSwiidnPCKGS9sClgnD-112" value="运行时动态创建CCSpriteFrame计数流程方案A：" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="400" y="2808" width="310" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ITSwiidnPCKGS9sClgnD-115" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontColor=#000000;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="ITSwiidnPCKGS9sClgnD-113" target="ITSwiidnPCKGS9sClgnD-114">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ITSwiidnPCKGS9sClgnD-113" value="&lt;span style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;CCSpriteFrameCache&lt;br&gt;&lt;/span&gt;&lt;pre style=&quot;font-family: &amp;quot;JetBrains Mono&amp;quot;, monospace; font-size: 9.8pt;&quot;&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;spriteFrameByName&lt;/span&gt;&lt;/pre&gt;&lt;pre style=&quot;font-family: &amp;quot;JetBrains Mono&amp;quot;, monospace; font-size: 9.8pt;&quot;&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;获得一个&lt;/span&gt;&lt;/pre&gt;&lt;pre style=&quot;font-family: &amp;quot;JetBrains Mono&amp;quot;, monospace; font-size: 9.8pt;&quot;&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;CCSpriteFrame&lt;/span&gt;&lt;/pre&gt;&lt;pre style=&quot;font-family: &amp;quot;JetBrains Mono&amp;quot;, monospace; font-size: 9.8pt;&quot;&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;此时引用计数为0&lt;/span&gt;&lt;/pre&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#000000;align=left;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="440" y="2868" width="180" height="142" as="geometry" />
+        </mxCell>
+        <mxCell id="ITSwiidnPCKGS9sClgnD-117" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontColor=#000000;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="ITSwiidnPCKGS9sClgnD-114" target="ITSwiidnPCKGS9sClgnD-116">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ITSwiidnPCKGS9sClgnD-114" value="CCSpriteFrame赋值给外部时，比如CCSprite或CCAnimation时，需引用计数+1 （此时总计数为1）" style="whiteSpace=wrap;html=1;align=left;fontColor=#000000;rounded=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="450" y="3040" width="120" height="119" as="geometry" />
+        </mxCell>
+        <mxCell id="ITSwiidnPCKGS9sClgnD-116" value="CCSprite或CCAnimation释放时，触发CCSpriteFrame计数-1" style="whiteSpace=wrap;html=1;align=left;fontColor=#000000;rounded=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="440" y="3200" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="ITSwiidnPCKGS9sClgnD-118" value="运行时动态创建CCSpriteFrame计数流程方案B：" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="680" y="2808" width="310" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ITSwiidnPCKGS9sClgnD-119" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontColor=#000000;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="ITSwiidnPCKGS9sClgnD-120" target="ITSwiidnPCKGS9sClgnD-122">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ITSwiidnPCKGS9sClgnD-120" value="&lt;span style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;CCSpriteFrameCache&lt;br&gt;&lt;/span&gt;&lt;pre style=&quot;font-family: &amp;quot;JetBrains Mono&amp;quot;, monospace; font-size: 9.8pt;&quot;&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;spriteFrameByName&lt;/span&gt;&lt;/pre&gt;&lt;pre style=&quot;font-family: &amp;quot;JetBrains Mono&amp;quot;, monospace; font-size: 9.8pt;&quot;&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;获得一个&lt;/span&gt;&lt;/pre&gt;&lt;pre style=&quot;font-family: &amp;quot;JetBrains Mono&amp;quot;, monospace; font-size: 9.8pt;&quot;&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;CCSpriteFrame&lt;/span&gt;&lt;/pre&gt;&lt;pre style=&quot;font-family: &amp;quot;JetBrains Mono&amp;quot;, monospace; font-size: 9.8pt;&quot;&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;此时引用计数为&lt;font color=&quot;#ff3333&quot;&gt;1&lt;/font&gt;&lt;/span&gt;&lt;/pre&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#000000;align=left;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="745" y="2868" width="180" height="142" as="geometry" />
+        </mxCell>
+        <mxCell id="ITSwiidnPCKGS9sClgnD-121" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontColor=#000000;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="ITSwiidnPCKGS9sClgnD-122" target="ITSwiidnPCKGS9sClgnD-123">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ITSwiidnPCKGS9sClgnD-122" value="CCSpriteFrame赋值给外部时，比如CCSprite或CCAnimation时，需引用计数+1 （此时总计数为2）" style="whiteSpace=wrap;html=1;align=left;fontColor=#000000;rounded=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="755" y="3040" width="120" height="119" as="geometry" />
+        </mxCell>
+        <mxCell id="ITSwiidnPCKGS9sClgnD-125" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontColor=#FF3333;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="ITSwiidnPCKGS9sClgnD-123" target="ITSwiidnPCKGS9sClgnD-124">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ITSwiidnPCKGS9sClgnD-123" value="CCSprite或CCAnimation释放时，触发CCSpriteFrame计数-1" style="whiteSpace=wrap;html=1;align=left;fontColor=#000000;rounded=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="745" y="3200" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="ITSwiidnPCKGS9sClgnD-124" value="定时，或者按数量策略回收CCSpriteFrameCache中计数为1的CCSpriteFrame" style="whiteSpace=wrap;html=1;align=left;fontColor=#000000;rounded=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="740" y="3320" width="120" height="100" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
